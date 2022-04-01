@@ -102,12 +102,7 @@ p {
   width: 50vw;
   padding: 1rem;
 }
-#wiki {
-  margin-top: 3rem;
-}
-#bio {
-  padding: 2rem 0;
-}
+
 .footer {
   margin: 2rem 0 0.5rem 0;
   font-family: "Montserrat";
@@ -137,7 +132,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .container {
     flex-direction: column;
     gap: 0;
