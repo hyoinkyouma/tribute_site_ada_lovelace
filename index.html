@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ada Lovelace</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/calculator.svg" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="brand">Ada Lovelace</span>
+      <ul class="navitems">
+        <li class="navitem"><a class="navlink" href="#title">Home</a></li>
+        <li class="navitem"><a class="navlink" href="#bio">Biography</a></li>
+        <li class="navitem"><a class="navlink" href="#wiki">Work</a></li>
+      </ul>
+    </nav>
+    <section id="title">
+      <div class="container title">
+        <div>
+          <img
+            src="./assets/Ada_Lovelace_Portrait_KIDS_Women-Heroes_02-21.jpg"
+            alt="Ada-lovelace-paiting"
+            class="animation-fadein"
+          />
+        </div>
+        <div class="animation-fadein description-text text-shadow">
+          <h1>Ada Lovelace</h1>
+          <hr />
+          <h2>The First Computer Programmer</h2>
+        </div>
+      </div>
+    </section>
+    <section id="bio">
+      <h2 class="section-header">Biography</h2>
+      <div class="container bio">
+        <div>
+          <h2 class="description-text hidden">
+            Most wealthy women of the 1800s did not study math and science. Ada
+            Lovelace excelled at them.
+          </h2>
+          <p class="description-text hidden">
+            When she was 17, Ada met mathematician and inventor Charles Babbage
+            at a town party. <br />
+            She was fascinated by his Difference Engine, an early version of the
+            calculator. <br />
+            He soon became her mentor. Lovelace imagined that the engine could
+            also follow <br />
+            patterns—or codes—not only to calculate numbers, but to form
+            letters, too. <br />This is a very basic explanation of computer
+            programming. <br />
+            <br />
+            Babbage never received enough funding to complete the Analytical
+            Engine. <br />
+            Lovelace’s notes were forgotten. <br />
+            <br />
+            But in 1953, her notes were republished in a book about digital
+            computing that showed how computers work by following patterns. It
+            turns out that long before the first computer was invented Lovelace
+            had come up with the idea for a computer language.
+          </p>
+        </div>
+        <div>
+          <img class="hidden" src="./assets/ada.jpg" />
+        </div>
+      </div>
+    </section>
+    <section id="wiki">
+      <h2 class="section-header hidden">Work</h2>
+      <div class="container wiki hidden">
+        <div>
+          <img src="./assets/ada_algo.jpg" alt="first-computer-algorithm" />
+        </div>
+        <div>
+          <h2 class="description-text">The first computer algorithm.</h2>
+          <p class="description-text">
+            Ada Lovelace's notes were labelled alphabetically from A to G. In
+            note G, she describes an algorithm for the Analytical Engine to
+            compute Bernoulli numbers. It is considered to be the first
+            published algorithm ever specifically tailored for implementation on
+            a computer, and Ada Lovelace has often been cited as the first
+            computer programmer for this reason.<br /><br />
+            The engine was never completed so her program was never tested. In
+            1953, more than a century after her death, Ada Lovelace's notes on
+            Babbage's Analytical Engine were republished as an appendix to B. V.
+            Bowden's Faster than Thought: A Symposium on Digital Computing
+            Machines. The engine has now been recognised as an early model for a
+            computer and her notes as a description of a computer and software.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <span class="footer-text">
+        All rights to the images belong to their respective owners. <br />This
+        website was made by Roman Augusto Cabalum as an example project.
+      </span>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.js"
+      integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          $(".hidden").each(function (i) {
+            let bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            let bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if (bottom_of_window > bottom_of_object) {
+              $(this).animate({ opacity: "1" }, 500);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
