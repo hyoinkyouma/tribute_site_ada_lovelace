@@ -136,3 +136,41 @@ p {
     opacity: 1;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    gap: 0;
+    height: auto;
+    margin: 0 auto;
+  }
+  .brand {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .description-text {
+    font-size: 1rem;
+    width: 100vw;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  .section-header {
+    font-size: 1.5rem;
+  }
+
+  .bio {
+    flex-direction: column-reverse;
+  }
+
+  .navbar {
+    width: 100%;
+    font-size: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+}
